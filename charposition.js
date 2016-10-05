@@ -16,9 +16,8 @@ function countPosition(input) {
       // charCount[key] = 1;
     } else {
       var prevObj = charCount[key];
-      var size = prevObj.size;
-      console.log(size)
-      prevObj["secondInst"] = stringPos;
+      var size = Object.keys(prevObj).length;
+      prevObj[size] = stringPos;
     }
     stringPos++;
   }
