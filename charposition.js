@@ -11,13 +11,13 @@ function countPosition(input) {
 
     if (!charCount[key]) {
       charCount[key] = (newObj = {});
-      newObj.firstInst = stringPos;
+      newObj["Instance 1"] = "Position " + stringPos;
 
       // charCount[key] = 1;
     } else {
       var prevObj = charCount[key];
       var size = Object.keys(prevObj).length;
-      prevObj[size] = stringPos;
+      prevObj[("Instance " + (size + 1))] = "Position " + stringPos;
     }
     stringPos++;
   }
